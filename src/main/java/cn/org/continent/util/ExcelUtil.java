@@ -1,5 +1,8 @@
 package cn.org.continent.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author Design By Scrooged
  * @version 1.0
@@ -8,4 +11,5 @@ package cn.org.continent.util;
  */
 public class ExcelUtil {
 
+    private static Logger logger = LoggerFactory.getLogger(ExcelUtil.class);
 }
