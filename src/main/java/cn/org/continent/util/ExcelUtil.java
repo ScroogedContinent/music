@@ -230,7 +230,7 @@ public class ExcelUtil {
                 for (int j = 0; j < row.getLastCellNum(); j++) {
                     fields[j].setAccessible(true);
                     String cellValue = readCellValue(row.getCell(j));
-                    if(fields[j].getType() == Integer.class){
+                    if(fields[j].getType() == Integer.class || fields[j].getType() == int.class){
                         fields[j].set(object, Optional.ofNullable(Integer.valueOf(cellValue)).orElse(null));
                     }else {
                         fields[j].set(object, cellValue);
