@@ -31,13 +31,13 @@ public class UserServiceImpl extends BaseServiceImpl<IUserMapper, User> implemen
     }
 
     @Override
-    public User selectByUid(String sid) {
-        return selectById(sid);
+    public User selectByUid(String userId) {
+        return selectById(userId);
     }
 
     @Override
-    public boolean delById(String sid) {
-        return deleteById(sid);
+    public boolean delById(String userId) {
+        return deleteById(userId);
     }
 
     @Override

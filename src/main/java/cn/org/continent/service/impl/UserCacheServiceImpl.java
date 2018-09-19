@@ -42,7 +42,7 @@ public class UserCacheServiceImpl implements IUserCacheService {
         redisCommand.removeBlear("music*");
 
         for (User user : users ) {
-            redisCommand.setValue("music:"+user.getSid(), user);
+            redisCommand.setValue("music:"+user.getUserId(), user);
             //redisCommand.setValue("user:"+user.getSid(), user);
             //redisCommand.setValue("music"+user.getSid(), user, 200L);
             //redisCommand.addMap("music"+user.getSid(), );

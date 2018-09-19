@@ -31,13 +31,13 @@ import java.io.Serializable;
 @Setter
 @Accessors(chain = true) //链式赋值
 @ToString //重写了toString方法
-@TableName("student")
+@TableName("user")
 public class User extends Model<User> implements Serializable {
     @TableId
-    private String sid;
+    private String userId;
     @Fulltext
     @OrderField(value = DbConstant.ORDER_DESC)
-    private String sname;
+    private String username;
     @Fulltext
     private SexEnum sex;
     private String age;
@@ -60,7 +60,7 @@ public class User extends Model<User> implements Serializable {
 
     @Override
     protected Serializable pkVal() {
-        return getSid();
+        return getUserId();
     }
 
 }

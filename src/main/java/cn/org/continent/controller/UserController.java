@@ -37,23 +37,23 @@ public class UserController {
         return userService.selectUser();
     }
 
-    @GetMapping("/user/{sid}")
+    @GetMapping("/user/{userId}")
     @ApiOperation(value = "查询指定人", notes = "查询指定人")
-    @ApiImplicitParam(paramType = "path", name = "sid", value = "用户编号", required = true, dataType = "String")
-    public User selectById(@PathVariable("sid") String sid){
-        return userService.selectByUid(sid);
+    @ApiImplicitParam(paramType = "path", name = "userId", value = "用户编号", required = true, dataType = "String")
+    public User selectById(@PathVariable("userId") String userId){
+        return userService.selectByUid(userId);
     }
 
-    @DeleteMapping("/user/{sid}")
+    @DeleteMapping("/user/{userId}")
     @ApiOperation(value = "删除指定人", notes = "删除指定人")
-    public boolean delById(@PathVariable("sid") String sid){
-        return userService.delById(sid);
+    public boolean delById(@PathVariable("userId") String userId){
+        return userService.delById(userId);
     }
 
-    @PutMapping("/user/{sid}")
+    @PutMapping("/user/{userId}")
     @ApiOperation(value = "更新指定人", notes = "更新指定人")
-    public boolean modifyById(@PathVariable("sid") String sid, @RequestBody User user){
-        user.setSid(sid);
+    public boolean modifyById(@PathVariable("userId") String userId, @RequestBody User user){
+        user.setUserId(userId);
         return userService.modifyById(user);
     }
 

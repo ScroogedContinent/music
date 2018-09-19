@@ -20,9 +20,9 @@ public interface IUserService extends IBaseService<User> {
      */
     List<User> selectUser();
 
-    User selectByUid(String sid);
+    User selectByUid(String userId);
 
-    boolean delById(String sid);
+    boolean delById(String userId);
 
     boolean modifyById(User user);
 
