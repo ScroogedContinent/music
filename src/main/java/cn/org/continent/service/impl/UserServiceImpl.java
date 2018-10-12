@@ -6,11 +6,16 @@ import cn.org.continent.base.service.impl.BaseServiceImpl;
 import cn.org.continent.entity.User;
 import cn.org.continent.mapper.IUserMapper;
 import cn.org.continent.service.IUserService;
+import cn.org.continent.util.CharSequenceUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Map;
+import java.util.regex.Pattern;
 
 /**
  * @author Design By Scrooged
@@ -59,5 +64,25 @@ public class UserServiceImpl extends BaseServiceImpl<IUserMapper, User> implemen
     @Override
     public ResponseBean<DataTable<User>> findByPage(DataTable dataTable) {
         return new ResponseBean<DataTable<User>>().returnData(pageSearch(dataTable));
+    }
+
+    private Pattern pattern = Pattern.compile("\\$\\{(?<key>.*?)}");
+
+    public String placeHolder(String content, Map<String, String> paramMap){
+        LocalDateTime localDateTime = LocalDateTime.now();
+        StringBuilder builder = CharSequenceUtils.replaceAll(content, pattern, m ->{
+            String key = m.group("key");
+            String value = paramMap.get(key);
+            if(null != value){
+                return value;
+            }else if (key.startsWith("date")){
+                return DateTimeFormatter.ofPattern(key.length() > "date".length()
+                        ? key.substring("date".length() + 1)
+                        : "yyyy-MM-dd" )
+                        .format(localDateTime);
+            }
+            return "";
+        });
+        return builder.toString();
     }
 }
