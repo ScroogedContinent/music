@@ -12,10 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 /**
  * @author Design By Scrooged
@@ -35,6 +32,99 @@ public class ExcelUtil {
     public static boolean isExcel2007(String filePath)
     {
         return filePath.matches("^.+\\.(?i)(xlsx)$");
+    }
+
+    /**
+     * 自定义列名导出Excel
+     * @param filename 文件名 如：D:\用户信息.xls/.xlsx
+     * @param titles 标题
+     * @param list 读入的信息
+     * @param sheetname 表名
+     * @param noUseColumns 未使用的列名
+     */
+    private static void exportExcelDefine(String filename, String[] titles, List<Object> list, String sheetname, List<String> noUseColumns){
+        //第一步，创建一个webBook，对应一个Excel文件
+        Workbook wb = null;
+        if(isExcel2007(filename)){
+            wb = new XSSFWorkbook();
+        }else{
+            wb = new HSSFWorkbook();
+        }
+        //第二步，在webBook中添加一个sheet，对应Excel文件中的sheet
+        Sheet sheet = wb.createSheet(sheetname);
+        //第三步，在sheet中添加表头第0行，注意老版本poi对Excel的行数列数有限制short
+        Row row = sheet.createRow(0);
+        Cell cell = null;
+        List<Integer> noneed = new ArrayList<>();
+        int i = 0;
+        int k = 0;
+        for (String title : titles) {
+            if(noUseColumns.contains(title)){
+                noneed.add(i + k);
+                k++;
+                continue;
+            }
+            sheet.setColumnWidth(i, 600*6);
+            /*sheet.autoSizeColumn(0);
+            sheet.autoSizeColumn(1);*/
+            cell = row.createCell(i);
+            cell.setCellValue(titles[i]);
+            i++;
+        }
+        Map<Integer, List<Integer>> map = new HashMap<>(list.size());
+        for (int j = 0; j < list.size(); j++) {
+            List<Integer> a = new ArrayList<>();
+            a.addAll(noneed);
+            map.put(j, a);
+        }
+
+        //第四步，创建表格数据
+        createTable(list, sheet, row, cell, map);
+        //第五步，将文件存到指定位置
+        readFile(wb, filename);
+    }
+
+    /**
+     * 创建表格数据自定义列名
+     * @param list 读的数据
+     * @param sheet Excel表名
+     * @param row 行
+     * @param cell 单元格
+     * @param map 未使用的列名信息位置
+     */
+    private static void createTable(List<Object> list, Sheet sheet, Row row, Cell cell, Map<Integer, List<Integer>> map){
+        Field[] fields = null;
+        int i = 1;
+        for (Object obj:list) {
+            fields = obj.getClass().getDeclaredFields();
+            row = sheet.createRow(i);
+            int j = 0;
+            for (Field field:fields) {
+                if(map.get(i-1).contains(j)){
+                    for (int k = 0; k < map.get(i-1).size(); k++) {
+                        int change = map.get(i-1).get(k) - 1;
+                        map.get(i-1).remove(k);
+                        map.get(i-1).add(k, change);
+                    }
+                    continue;
+                }
+                field.setAccessible(true);
+                Object va = null;
+                try {
+                    va = field.get(obj);
+                } catch (IllegalAccessException e) {
+                    logger.error(e.getMessage());
+                    e.printStackTrace();
+                }
+                if(null == va){
+                    va = "";
+                }
+                cell = row.createCell(j);
+                cell.setCellValue(va.toString());
+                j++;
+            }
+            i++;
+        }
     }
 
     /**
