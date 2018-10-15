@@ -3,7 +3,7 @@ package cn.org.continent.base.exception;
 /**
  * @author Design By Scrooged
  * @version 1.0
- * @description
+ * @description 自定义异常类
  * @date 2018/8/27 11:29
  */
 public class MusicDefineException extends RuntimeException{
