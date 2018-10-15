@@ -8,8 +8,8 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: cn.org.continent.entity
-  typeEnumsPackage: cn.org.continent.entity.enums
+  typeAliasesPackage: cn.org.scrooged.entity
+  typeEnumsPackage: cn.org.scrooged.entity.enums
   global-config:
     #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
     id-type: 3
@@ -36,8 +36,8 @@ mybatis-plus:
 #mybatis-plus:
   #mapper-locations: classpath:/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  #typeAliasesPackage: cn.org.continent.entity
-  #typeEnumsPackage: cn.org.continent.entity.enums
+  #typeAliasesPackage: cn.org.scrooged.entity
+  #typeEnumsPackage: cn.org.scrooged.entity.enums
   #global-config:
     # 数据库相关配置
     #db-config:
