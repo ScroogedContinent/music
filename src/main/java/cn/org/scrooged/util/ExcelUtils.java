@@ -20,9 +20,9 @@ import java.util.*;
  * @description 导入导出Excel的工具类
  * @date 2018/9/12 14:33
  */
-public class ExcelUtil {
+public class ExcelUtils {
 
-    private static Logger logger = LoggerFactory.getLogger(ExcelUtil.class);
+    private static Logger logger = LoggerFactory.getLogger(ExcelUtils.class);
 
     public static boolean isExcel2003(String filePath)
     {
@@ -269,7 +269,7 @@ public class ExcelUtil {
             cell = row.createCell(i);
             cell.setCellValue(titles[i]);
             if(comboBox.containsKey(titles[i])){
-                ExcelUtil.serComboBox(sheet, comboBox.get(titles[i]), i);
+                ExcelUtils.serComboBox(sheet, comboBox.get(titles[i]), i);
             }
         }
 
@@ -286,9 +286,9 @@ public class ExcelUtil {
         File file = new File(filename);
         Workbook wb = null;
         try {
-            if(ExcelUtil.isExcel2007(file.getPath())){
+            if(ExcelUtils.isExcel2007(file.getPath())){
                 wb = new XSSFWorkbook(new FileInputStream(file));
-            }else if(ExcelUtil.isExcel2003(file.getPath())){
+            }else if(ExcelUtils.isExcel2003(file.getPath())){
                 wb = new HSSFWorkbook();
             }else {
                 throw new IllegalArgumentException("请导入Excel文件！");

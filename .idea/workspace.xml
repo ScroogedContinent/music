@@ -2,59 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbbe252-0e5f-4d19-a602-61f025e474bb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages_en_US.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages_zh_CN.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/i18n/IMessagesKeycode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/i18n/MessagesKeycode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/MusicApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/MusicApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/annotation/Fulltext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/annotation/Fulltext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/annotation/OrderField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/annotation/OrderField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/aop/RefreshCacheAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/aop/RefreshCacheAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/boot/IMusicApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/boot/IMusicApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/boot/MusicBootApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/boot/MusicBootApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/configuration/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/configuration/RedisConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/entity/DataTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/entity/DataTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/entity/ResponseBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/entity/ResponseBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/entity/SearchParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/entity/SearchParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/exception/GlobalDefaultExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/exception/GlobalDefaultExceptionHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/exception/MusicDefineException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/exception/MusicDefineException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/service/IBaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/service/IBaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/service/IRedisCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/service/IRedisCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/service/impl/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/service/impl/BaseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/service/impl/RedisCommandImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/service/impl/RedisCommandImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/sqlparser/DataSerAuthSqlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/sqlparser/DataSerAuthSqlParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/util/MessagesUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/util/MessagesUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/util/SearchConditionWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/util/SearchConditionWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/util/SpringContextUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/util/SpringContextUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/util/lock/DistributedLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/util/lock/DistributedLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/util/lock/DistributedLockUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/util/lock/DistributedLockUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/base/util/lock/impl/JedisLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/util/lock/impl/JedisLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/boot/RereshCacheRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/boot/RereshCacheRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/configuration/ConfigurationBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/configuration/ConfigurationBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/configuration/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/configuration/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/constant/DbConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/constant/DbConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/constant/SearchParamConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/constant/SearchParamConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/entity/enums/SexEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/entity/enums/SexEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/mapper/IUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/mapper/IUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/mapper/IUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/mapper/IUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/service/IUserCacheService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/service/IUserCacheService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/service/impl/UserCacheServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/service/impl/UserCacheServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/util/CharSequenceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/CharSequenceUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/util/ClassKit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/ClassKit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/util/ExcelUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/ExcelUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/util/FieldMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/FieldMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/util/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/JsonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/util/ListOptionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/ListOptionHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/org/continent/util/StringKit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/StringKit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-devup2-3-1.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-devup2-3-1.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/org/continent/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/org/scrooged/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/org/continent/BeanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/org/scrooged/BeanTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/messages_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages_en_US.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/messages_zh_CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages_zh_CN.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-devup2-3-1.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-devup2-3-1.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/MusicApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/annotation/Fulltext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/annotation/OrderField.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/aop/RefreshCacheAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/boot/IMusicApplicationRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/boot/MusicBootApplicationRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/configuration/RedisConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/entity/DataTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/entity/ResponseBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/entity/SearchParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/exception/GlobalDefaultExceptionHandle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/exception/MusicDefineException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/service/IBaseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/service/IRedisCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/service/impl/BaseServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/service/impl/RedisCommandImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/sqlparser/DataSerAuthSqlParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/util/SearchConditionWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/util/SpringContextUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/util/lock/DistributedLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/util/lock/DistributedLockUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/base/util/lock/impl/JedisLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/boot/RereshCacheRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/configuration/ConfigurationBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/configuration/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/constant/DbConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/constant/SearchParamConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/entity/enums/SexEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/mapper/IUserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/mapper/IUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/service/IUserCacheService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/service/IUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/service/impl/UserCacheServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/util/CharSequenceUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/util/ClassKit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/util/FieldMetaObjectHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/util/JsonUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/util/ListOptionHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/org/continent/util/StringKit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/org/continent/BeanTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,11 +69,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-148">
-              <caret line="6" column="38" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            <state>
+              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MusicApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/MusicApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="65" column="59" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExcelUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/ExcelUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="237" selection-start-line="237" selection-end-line="237" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/entity/ResponseBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -87,8 +131,8 @@
         <option value="spring-beans.schema" />
         <option value="Enum" />
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -105,10 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/configuration/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/annotation/Fulltext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/util/ListOptionHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/util/StringKit.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/base/service/impl/BaseServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/base/util/SearchConditionWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/base/exception/AjaxObject.java" />
@@ -141,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/base/configuration/RedisConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/MusicApplication.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/service/impl/UserCacheServiceImpl.java" />
@@ -156,6 +195,11 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/base/exception/GlobalDefaultExceptionHandle.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/org/continent/base/exception/MusicDefineException.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/i18n/IMessagesKeycode.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/i18n/messages_zh_CN.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/org/scrooged/i18n/MessagesKeycode.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/i18n/messages_en_US.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -177,8 +221,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="9" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -188,6 +232,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -227,6 +273,24 @@
               <item name="music" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="scrooged" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="music" type="b2602c69:ProjectViewProjectNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="scrooged" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="music" type="b2602c69:ProjectViewProjectNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -241,8 +305,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,7 +312,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="BeanPostProcessor&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.BeanPostProcessor&#10;ApplicationListener&#9;PSI&#9;JAVA://org.springframework.context.ApplicationListener&#10;CommandLineRunner&#9;PSI&#9;JAVA://org.springframework.boot.CommandLineRunner&#10;InitializingB&#9;PSI&#9;JAVA://org.springframework.beans.factory.InitializingBean&#10;*Redis*&#9;PSI&#9;JAVA://org.springframework.data.redis.core.RedisAccessor&#10;RedisU&#9;FILE&#9;jar://D:/Maven 3.5.4/my_maven_local_repository/org/springframework/data/spring-data-redis/2.0.9.RELEASE/spring-data-redis-2.0.9.RELEASE.jar!/org/springframework/data/redis/core/RedisConnectionUtils.class&#10;RedisUtil&#9;PSI&#9;JAVA://org.springframework.data.redis.core.RedisConnectionUtils&#10;SuppressWar&#9;PSI&#9;JAVA://java.lang.SuppressWarnings&#10;EnableTransactionMan&#9;FILE&#9;jar://D:/Maven 3.5.4/my_maven_local_repository/org/springframework/spring-tx/5.0.8.RELEASE/spring-tx-5.0.8.RELEASE.jar!/org/springframework/transaction/annotation/EnableTransactionManagement.class&#10;*Scan&#9;FILE&#9;jar://D:/Maven 3.5.4/my_maven_local_repository/org/springframework/spring-context/5.0.8.RELEASE/spring-context-5.0.8.RELEASE-sources.jar!/org/springframework/context/annotation/ComponentScan.java&#10;LogicSqlInjector&#9;FILE&#9;jar://D:/Maven 3.5.4/my_maven_local_repository/com/baomidou/mybatis-plus-extension/3.0-gamma/mybatis-plus-extension-3.0-gamma.jar!/com/baomidou/mybatisplus/extension/injector/LogicSqlInjector.class" />
+    <property name="SearchEverywhereHistoryKey" value="*Utils&#9;null&#9;null&#10;BeanPostProcessor&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.BeanPostProcessor&#10;ApplicationListener&#9;PSI&#9;JAVA://org.springframework.context.ApplicationListener&#10;CommandLineRunner&#9;PSI&#9;JAVA://org.springframework.boot.CommandLineRunner&#10;InitializingB&#9;PSI&#9;JAVA://org.springframework.beans.factory.InitializingBean&#10;*Redis*&#9;PSI&#9;JAVA://org.springframework.data.redis.core.RedisAccessor&#10;RedisU&#9;FILE&#9;jar://D:/Maven 3.5.4/my_maven_local_repository/org/springframework/data/spring-data-redis/2.0.9.RELEASE/spring-data-redis-2.0.9.RELEASE.jar!/org/springframework/data/redis/core/RedisConnectionUtils.class&#10;RedisUtil&#9;PSI&#9;JAVA://org.springframework.data.redis.core.RedisConnectionUtils&#10;SuppressWar&#9;PSI&#9;JAVA://java.lang.SuppressWarnings&#10;EnableTransactionMan&#9;FILE&#9;jar://D:/Maven 3.5.4/my_maven_local_repository/org/springframework/spring-tx/5.0.8.RELEASE/spring-tx-5.0.8.RELEASE.jar!/org/springframework/transaction/annotation/EnableTransactionManagement.class&#10;*Scan&#9;FILE&#9;jar://D:/Maven 3.5.4/my_maven_local_repository/org/springframework/spring-context/5.0.8.RELEASE/spring-context-5.0.8.RELEASE-sources.jar!/org/springframework/context/annotation/ComponentScan.java&#10;LogicSqlInjector&#9;FILE&#9;jar://D:/Maven 3.5.4/my_maven_local_repository/com/baomidou/mybatis-plus-extension/3.0-gamma/mybatis-plus-extension-3.0-gamma.jar!/com/baomidou/mybatisplus/extension/injector/LogicSqlInjector.class" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="D:/workspace/scrooged" />
@@ -289,7 +351,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BeanTest.isHave">
+  <component name="RunManager" selected="Spring Boot.MusicApplication">
     <configuration name="MusicApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.org.scrooged.MusicApplication" />
       <module name="music" />
@@ -479,7 +541,8 @@
       <workItem from="1539177217812" duration="797000" />
       <workItem from="1539311621369" duration="10716000" />
       <workItem from="1539484692364" duration="5963000" />
-      <workItem from="1539569966633" duration="5822000" />
+      <workItem from="1539569966633" duration="11308000" />
+      <workItem from="1539659335968" duration="1856000" />
     </task>
     <task id="LOCAL-00001" summary="加了句日志打印">
       <created>1536736652746</created>
@@ -544,13 +607,17 @@
       <option name="project" value="LOCAL" />
       <updated>1539592546477</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="修改了包名">
+      <created>1539593022332</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1539593022332</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BeanTest_isHave - 2018.10.12 at 11h 29m 51s.xml">
-      <configuration name="BeanTest.isHave" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BeanTest_isHave - 2018.10.12 at 12h 07m 47s.xml">
       <configuration name="BeanTest.isHave" configurationId="JUnit" />
     </history-entry>
@@ -578,9 +645,12 @@
     <history-entry file="BeanTest_isHave - 2018.10.12 at 13h 33m 10s.xml">
       <configuration name="BeanTest.isHave" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BeanTest_isHave - 2018.10.15 at 16h 48m 10s.xml">
+      <configuration name="BeanTest.isHave" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197512000" />
+    <option name="totallyTimeSpent" value="204854000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -604,7 +674,7 @@
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.49924356" weight="0.29256198" />
+      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.49924356" weight="0.47107437" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.4514722" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="1" />
@@ -614,10 +684,9 @@
       <window_info anchor="bottom" id="Run" order="9" weight="0.43801653" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.18429662" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.2579425" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.26172465" />
       <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info id="Web" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.3289256" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -626,6 +695,7 @@
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32606325" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.3289256" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -644,18 +714,11 @@
     <MESSAGE value="添加了下载Excel自定义列" />
     <MESSAGE value="添加了一个工具类" />
     <MESSAGE value="添加了异常类的描述" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了异常类的描述" />
+    <MESSAGE value="修改了包名" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了包名" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/service/impl/UserServiceImpl.java</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="15" />
     </breakpoint-manager>
   </component>
@@ -689,35 +752,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.9.RELEASE/spring-data-redis-2.0.9.RELEASE-sources.jar!/org/springframework/data/redis/core/ValueOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/continent/base/configuration/CacheConfig.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.8.RELEASE/spring-core-5.0.8.RELEASE-sources.jar!/org/springframework/core/annotation/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="72" column="50" lean-forward="true" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar!/org/aspectj/lang/annotation/Pointcut.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/service/impl/RedisCommandImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.4.RELEASE/spring-boot-autoconfigure-2.0.4.RELEASE.jar!/org/springframework/boot/autoconfigure/data/redis/RedisProperties.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -843,20 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/MusicApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/service/impl/UserCacheServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
@@ -899,20 +919,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/org/scrooged/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -920,9 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,13 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/ExcelUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="98" column="56" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -961,38 +961,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/'messages'.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n.messages.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_zh_CN.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_en_US.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/'messages'.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n.messages.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/exception/MusicDefineException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/entity/ResponseBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -1000,9 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,8 +990,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-148">
-          <caret line="6" column="38" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        <state>
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.8.RELEASE/spring-aop-5.0.8.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="745" selection-start-line="745" selection-end-line="745" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.8.RELEASE/spring-core-5.0.8.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/i18n/IMessagesKeycode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/base/entity/ResponseBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="65" column="59" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/MusicApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_zh_CN.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_en_US.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/i18n/MessagesKeycode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.4.RELEASE/spring-boot-2.0.4.RELEASE-sources.jar!/org/springframework/boot/context/config/ConfigFileApplicationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="839">
+          <caret line="124" column="7" lean-forward="true" selection-start-line="124" selection-start-column="7" selection-end-line="124" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/ExcelUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="237" selection-start-line="237" selection-end-line="237" />
         </state>
       </provider>
     </entry>

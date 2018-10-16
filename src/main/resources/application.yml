@@ -8,4 +8,4 @@ spring:
     basename: il8n/messages
     encoding: utf-8
   profiles:
-      active: dev
+    active: dev
