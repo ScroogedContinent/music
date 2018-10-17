@@ -13,6 +13,9 @@ import java.io.*;
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 /**
  * @author Design By Scrooged
@@ -24,14 +27,29 @@ public class ExcelUtils {
 
     private static Logger logger = LoggerFactory.getLogger(ExcelUtils.class);
 
-    public static boolean isExcel2003(String filePath)
+    /*private static boolean isExcel2003(String filePath)
     {
         return filePath.matches("^.+\\.(?i)(xls)$");
     }
 
-    public static boolean isExcel2007(String filePath)
+    private static boolean isExcel2007(String filePath)
     {
         return filePath.matches("^.+\\.(?i)(xlsx)$");
+    }*/
+
+    //Excel2003的正则预加载
+    private static final Pattern EXCEL_ZEROTHREE_REGEX = Pattern.compile("^.+\\.(?i)(xls)$");
+    //Excel2007的正则预加载
+    private static final Pattern EXCEL_ZEROSEVEN_REGEX = Pattern.compile("^.+\\.(?i)(xlsx)$");
+
+    private static boolean isExcel2003(String filePath)
+    {
+        return EXCEL_ZEROTHREE_REGEX.matcher(filePath).matches();
+    }
+
+    private static boolean isExcel2007(String filePath)
+    {
+        return EXCEL_ZEROSEVEN_REGEX.matcher(filePath).matches();
     }
 
     /**
@@ -234,6 +252,29 @@ public class ExcelUtils {
             descFile = new File(parentPath + File.separator + newFilename);
         }
         return descFile;
+    }
+
+    private static String NAME_PATTERN = "%s(\\((?<num>\\d+)\\))?\\.%s?";
+    private static String fileNameFormat = "%s(%d).%s";
+
+    public static String computerNextFilename(String filename){
+        // demo.txt
+        int pIdx = filename.lastIndexOf('.');
+        String name = filename.substring(0,pIdx);
+        String suffixname = filename.substring(pIdx+1,filename.length());
+        String pattern  = String.format(NAME_PATTERN,name,suffixname);
+        List<String> strings = Arrays.asList("demo.txt","1.txt","demo(1).txt","demo(99).txt");
+        Pattern pattern1 = Pattern.compile(pattern);
+        String[] versions = strings.stream().map(pattern1::matcher).filter(Matcher::matches).map(m -> m.group("num"))
+                .toArray(String[]::new);
+        if(0 == versions.length){
+            // demo.txt doumeiyou
+            return filename;
+        }else{
+            int max = Stream.of(versions).filter(Objects::nonNull).mapToInt(Integer::valueOf).max().orElse(0);
+            //int max = Stream.of(versions).filter(Objects::nonNull).map(Integer::valueOf).max(Integer::compareTo).orElse(0);
+            return String.format(fileNameFormat,name,max+1,suffixname);
+        }
     }
 
     /**
