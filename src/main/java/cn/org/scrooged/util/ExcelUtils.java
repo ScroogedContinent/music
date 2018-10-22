@@ -1,10 +1,11 @@
 package cn.org.scrooged.util;
 
 import org.apache.commons.lang.time.DateFormatUtils;
+import org.apache.poi.hssf.usermodel.DVConstraint;
+import org.apache.poi.hssf.usermodel.HSSFDataValidation;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddressList;
-import org.apache.poi.xssf.usermodel.XSSFDataValidation;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -294,9 +295,11 @@ public class ExcelUtils {
         }
         //第二步，在webBook中添加一个sheet，对应Excel文件中的sheet
         Sheet sheet = wb.createSheet(sheetname);
+        Sheet hiddenSheet = wb.createSheet("comboBoxValues");
         //第三步，在sheet中添加表头第0行，注意老版本poi对Excel的行数列数有限制short
         Row row = sheet.createRow(0);
         Cell cell = null;
+        int comboBoxValueIndex = 64;
         for (int i = 0; i < titles.length; i++) {
             sheet.setColumnWidth(i, 600*6);
 
@@ -310,12 +313,38 @@ public class ExcelUtils {
             cell = row.createCell(i);
             cell.setCellValue(titles[i]);
             if(comboBox.containsKey(titles[i])){
-                ExcelUtils.serComboBox(sheet, comboBox.get(titles[i]), i);
+                comboBoxValueIndex ++;
+                genearteOtherSheet(hiddenSheet, comboBoxValueIndex, comboBox.get(titles[i]));
+                setComboBox(sheet, "comboBoxValues!$"+(char)comboBoxValueIndex+"$1:$"+(char)comboBoxValueIndex+"$"+comboBox.get(titles[i]).length, i);
+                //ExcelUtils.setComboBox(sheet, comboBox.get(titles[i]), i);
             }
+            // 隐藏作为下拉列表值的Sheet
+            wb.setSheetHidden(wb.getSheetIndex("comboBoxValues"), true);
         }
 
         //第四步，将文件存到指定位置
         readFile(wb, filename);
+    }
+
+    /**
+     * 创建下拉列表值存储工作表并设置值
+     * @param hiddenSheet 存放下拉框的表
+     * @param comboBoxValueIndex 列
+     * @param typeArrays 下拉框的值
+     */
+    private static void genearteOtherSheet(Sheet hiddenSheet, int comboBoxValueIndex, String[] typeArrays) {
+        int lastRowNum = hiddenSheet.getLastRowNum();
+        // 循环往该sheet中设置添加下拉列表的值
+        for (int i = 0; i < typeArrays.length; i++) {
+            Row row = null;
+            if (lastRowNum >=i && 0 != lastRowNum) {
+                row = hiddenSheet.getRow(i);
+            }else {
+                row = hiddenSheet.createRow(i);
+            }
+            Cell cell = row.createCell(comboBoxValueIndex - 65);
+            cell.setCellValue(typeArrays[i]);
+        }
     }
 
     /**
@@ -409,11 +438,25 @@ public class ExcelUtils {
     /**
      * 下载模板时设置下拉框的值
      * @param sheet 表名
-     * @param comboBoxContent 下拉框的值
+     * @param strFormula 下拉框的值
      * @param col 列的值
      */
-    private static void serComboBox(Sheet sheet, String[] comboBoxContent, int col){
-        DataValidationHelper helper = sheet.getDataValidationHelper();
+    private static void setComboBox(Sheet sheet, String strFormula, int col){
+
+        CellRangeAddressList addressList = new CellRangeAddressList(1, 500, col, col);
+        DataValidation dataValidation = null;
+        //处理Excel兼容性问题
+        if(sheet.getWorkbook() instanceof XSSFWorkbook){
+            DataValidationHelper helper = sheet.getDataValidationHelper();
+            //设置下拉框数据
+            DataValidationConstraint constraint = helper.createCustomConstraint(strFormula);
+            dataValidation = helper.createValidation(constraint, addressList);
+        }else{
+            DVConstraint constraint = DVConstraint.createFormulaListConstraint(strFormula);
+            // add
+            dataValidation = new HSSFDataValidation(addressList, constraint);
+        }
+        /*DataValidationHelper helper = sheet.getDataValidationHelper();
 
         //CellRangeAddressList(firstRow, lastRow, firstCol, lastCol);设置行列范围
         CellRangeAddressList addressList = new CellRangeAddressList(1, 500, col, col);
@@ -428,7 +471,7 @@ public class ExcelUtils {
             dataValidation.setShowErrorBox(true);
         }else{
             dataValidation.setSuppressDropDownArrow(false);
-        }
+        }*/
         sheet.addValidationData(dataValidation);
     }
 }

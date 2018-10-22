@@ -22,8 +22,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            <state relative-caret-position="456">
+              <caret line="114" column="32" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -58,8 +58,8 @@
       <file leaf-file-name="ExcelUtils.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/ExcelUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1326">
-              <caret line="257" column="55" lean-forward="true" selection-start-line="257" selection-start-column="55" selection-end-line="257" selection-end-column="55" />
+            <state relative-caret-position="115">
+              <caret line="452" column="78" lean-forward="true" selection-start-line="452" selection-start-column="78" selection-end-line="452" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -182,6 +182,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,9 +255,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -494,7 +494,9 @@
       <workItem from="1539569966633" duration="11308000" />
       <workItem from="1539659335968" duration="1856000" />
       <workItem from="1539700385633" duration="805000" />
-      <workItem from="1539777000300" duration="2537000" />
+      <workItem from="1539777000300" duration="3189000" />
+      <workItem from="1539864519227" duration="655000" />
+      <workItem from="1540193454871" duration="4167000" />
     </task>
     <task id="LOCAL-00001" summary="加了句日志打印">
       <created>1536736652746</created>
@@ -573,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539700598732</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="添加了同名文件的处理方法">
+      <created>1539779669049</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1539779669050</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -609,7 +618,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208196000" />
+    <option name="totallyTimeSpent" value="213670000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -644,7 +653,7 @@
       <window_info anchor="bottom" id="Run" order="9" weight="0.43801653" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.18429662" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24281392" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25037822" />
       <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
@@ -676,7 +685,8 @@
     <MESSAGE value="添加了异常类的描述" />
     <MESSAGE value="修改了包名" />
     <MESSAGE value="添加了国际化文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了国际化文件" />
+    <MESSAGE value="添加了同名文件的处理方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了同名文件的处理方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -949,13 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.8.RELEASE/spring-aop-5.0.8.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
@@ -1035,10 +1038,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="114" column="32" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/org/scrooged/util/ExcelUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1326">
-          <caret line="257" column="55" lean-forward="true" selection-start-line="257" selection-start-column="55" selection-end-line="257" selection-end-column="55" />
+        <state relative-caret-position="115">
+          <caret line="452" column="78" lean-forward="true" selection-start-line="452" selection-start-column="78" selection-end-line="452" selection-end-column="78" />
         </state>
       </provider>
     </entry>
