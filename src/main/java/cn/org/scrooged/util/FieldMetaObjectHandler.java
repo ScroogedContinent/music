@@ -13,8 +13,12 @@ public class FieldMetaObjectHandler extends MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
         Object delFlg = getFieldValByName("delFlg", metaObject);//mybatis-plus版本2.0.9+
-        if (delFlg == null) {
+        Object password = getFieldValByName("password", metaObject);//mybatis-plus版本2.0.9+
+        if (null == delFlg) {
             setFieldValByName("delFlg", "1", metaObject);//mybatis-plus版本2.0.9+
+        }
+        if (null == password){
+            setFieldValByName("password", "123456", metaObject);//mybatis-plus版本2.0.9+
         }
     }
 

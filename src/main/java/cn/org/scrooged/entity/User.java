@@ -42,6 +42,9 @@ public class User extends Model<User> implements Serializable {
     private SexEnum sex;
     private String age;
 
+    @TableField(fill = FieldFill.INSERT)
+    private String password;
+
     //逻辑删除字段
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
@@ -54,8 +57,9 @@ public class User extends Model<User> implements Serializable {
         return delFlg;
     }
 
-    public void setDelFlg(String delFlg) {
-        this.delFlg = delFlg;
+    @JsonIgnore
+    public String getPassword() {
+        return password;
     }
 
     @Override

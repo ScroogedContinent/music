@@ -11,6 +11,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 /**
@@ -73,5 +74,11 @@ public class UserController {
     @ApiOperation(value = "分页查询所有人", notes = "分页查询所有人")
     public ResponseBean<DataTable<User>> pageSearch(SearchParam searchParam){
         return userService.findByPage(new DataTable(searchParam));
+    }
+
+    @GetMapping("/user/login")
+    @ApiOperation(value = "用户登录", notes = "用户登录")
+    public ResponseBean<User> login(@RequestParam @NotEmpty String userId, @RequestParam @NotEmpty String password){
+        return userService.login(userId, password);
     }
 }

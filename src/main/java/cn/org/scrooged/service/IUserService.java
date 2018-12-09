@@ -31,4 +31,6 @@ public interface IUserService extends IBaseService<User> {
     List<User> selectAll();
 
     ResponseBean<DataTable<User>> findByPage(DataTable dataTable);
+
+    ResponseBean<User> login(String userId, String password);
 }

@@ -44,4 +44,10 @@ public class ResponseBean<T> implements Serializable {
         this.setData(t);
         return this;
     }
+
+    public ResponseBean<T>  returnData(T t, String msg){
+        this.setData(t);
+        this.setMsg(msg);
+        return this;
+    }
 }

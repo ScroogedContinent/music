@@ -9,6 +9,7 @@ import cn.org.scrooged.service.IUserService;
 import cn.org.scrooged.util.CharSequenceUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
@@ -64,6 +65,19 @@ public class UserServiceImpl extends BaseServiceImpl<IUserMapper, User> implemen
     @Override
     public ResponseBean<DataTable<User>> findByPage(DataTable dataTable) {
         return new ResponseBean<DataTable<User>>().returnData(pageSearch(dataTable));
+    }
+
+    @Override
+    public ResponseBean<User> login(String userId, String password) {
+        User user = selectById(userId);
+        String msg = "操作成功";
+        if (StringUtils.isEmpty(user)){
+            msg = "用户不存在";
+        }
+        if (null != user && !password.equals(user.getPassword())){
+            msg = "密码错误";
+        }
+        return new ResponseBean<User>().returnData(user, msg) ;
     }
 
     private Pattern pattern = Pattern.compile("\\$\\{(?<key>.*?)}");
