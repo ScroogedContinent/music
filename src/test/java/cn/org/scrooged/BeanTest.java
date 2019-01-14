@@ -37,4 +37,5 @@ public class BeanTest extends BaseTest{
         Assert.assertTrue("true", !cont.contains("$"));
         logger.info(cont);
     }
+
 }
