@@ -449,7 +449,8 @@ public class ExcelUtils {
         if(sheet.getWorkbook() instanceof XSSFWorkbook){
             DataValidationHelper helper = sheet.getDataValidationHelper();
             //设置下拉框数据
-            DataValidationConstraint constraint = helper.createCustomConstraint(strFormula);
+            DataValidationConstraint constraint = helper.createFormulaListConstraint(strFormula);
+            //DataValidationConstraint constraint = helper.createCustomConstraint(strFormula);
             dataValidation = helper.createValidation(constraint, addressList);
         }else{
             DVConstraint constraint = DVConstraint.createFormulaListConstraint(strFormula);
