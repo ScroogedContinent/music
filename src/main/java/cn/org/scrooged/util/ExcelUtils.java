@@ -1,8 +1,9 @@
 package cn.org.scrooged.util;
 
 import org.apache.commons.lang.time.DateFormatUtils;
-import org.apache.poi.hssf.usermodel.DVConstraint;
-import org.apache.poi.hssf.usermodel.HSSFDataValidation;
+import org.apache.poi.hssf.usermodel.HSSFDataValidationHelper;
+import org.apache.poi.hssf.usermodel.HSSFName;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddressList;
@@ -435,6 +436,10 @@ public class ExcelUtils {
         return cellValue;
     }
 
+    public static String getUUID(){
+        return UUID.randomUUID().toString().replace("-", "");
+    }
+
     /**
      * 下载模板时设置下拉框的值
      * @param sheet 表名
@@ -453,9 +458,20 @@ public class ExcelUtils {
             //DataValidationConstraint constraint = helper.createCustomConstraint(strFormula);
             dataValidation = helper.createValidation(constraint, addressList);
         }else{
-            DVConstraint constraint = DVConstraint.createFormulaListConstraint(strFormula);
+            //创建"名称"标签，用于连接
+            HSSFName namedCell = (HSSFName) (sheet.getWorkbook()).createName();
+            String formulaId = "-" + getUUID();
+            namedCell.setNameName(formulaId);
+            //设置标签公式
+            namedCell.setRefersToFormula(strFormula);
+            //设置数据的有效性选项
+            HSSFDataValidationHelper hdvHelper = new HSSFDataValidationHelper((HSSFSheet) sheet);
+            DataValidationConstraint dvConstraint = hdvHelper.createFormulaListConstraint(formulaId);
+            //添加菜单（将单元格与"名称"建立关联）
+            dataValidation = hdvHelper.createValidation(dvConstraint, addressList);
+            /*DVConstraint constraint = DVConstraint.createFormulaListConstraint(strFormula);
             // add
-            dataValidation = new HSSFDataValidation(addressList, constraint);
+            dataValidation = new HSSFDataValidation(addressList, constraint);*/
         }
         /*DataValidationHelper helper = sheet.getDataValidationHelper();
 
