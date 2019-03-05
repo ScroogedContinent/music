@@ -1,12 +1,10 @@
 package cn.org.scrooged.util;
 
 import org.apache.commons.lang.time.DateFormatUtils;
-import org.apache.poi.hssf.usermodel.HSSFDataValidationHelper;
-import org.apache.poi.hssf.usermodel.HSSFName;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddressList;
+import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -88,7 +86,7 @@ public class ExcelUtils {
             /*sheet.autoSizeColumn(0);
             sheet.autoSizeColumn(1);*/
             cell = row.createCell(i);
-            cell.setCellValue(titles[i]);
+            cell.setCellValue(title);
             i++;
         }
         Map<Integer, List<Integer>> map = new HashMap<>(list.size());
@@ -279,6 +277,12 @@ public class ExcelUtils {
         }
     }
 
+    private static final List<String> requiredFields  = new ArrayList<>();
+
+    static {
+        requiredFields.add("编号");
+    }
+
     /**
      * 导出Excel的模板
      * @param filename 文件名 如：D:\用户信息.xls/.xlsx
@@ -299,6 +303,13 @@ public class ExcelUtils {
         Sheet hiddenSheet = wb.createSheet("comboBoxValues");
         //第三步，在sheet中添加表头第0行，注意老版本poi对Excel的行数列数有限制short
         Row row = sheet.createRow(0);
+
+        Font blackFont = wb.createFont();
+        blackFont.setColor(IndexedColors.BLACK.getIndex());
+        Font redFont = wb.createFont();
+        redFont.setColor(IndexedColors.RED.getIndex());
+        RichTextString richTextString = null;
+
         Cell cell = null;
         int comboBoxValueIndex = 64;
         for (int i = 0; i < titles.length; i++) {
@@ -312,7 +323,23 @@ public class ExcelUtils {
             }
 
             cell = row.createCell(i);
-            cell.setCellValue(titles[i]);
+
+            if (requiredFields.contains(titles[i])) {
+                String stowedValue = titles[i]+"(*)";
+                if(isExcel2007(filename)){
+                    richTextString = new XSSFRichTextString(stowedValue);
+                }else{
+                    richTextString = new HSSFRichTextString(stowedValue);
+                }
+                int length = stowedValue.length();
+                //对titles[i]设置blackFont字体
+                richTextString.applyFont(0, length-3, blackFont);
+                //对"(*)"设置redFont字体
+                richTextString.applyFont(length-3, length, redFont);
+                cell.setCellValue(richTextString);
+            }else {
+                cell.setCellValue(titles[i]);
+            }
             if(comboBox.containsKey(titles[i])){
                 comboBoxValueIndex ++;
                 genearteOtherSheet(hiddenSheet, comboBoxValueIndex, comboBox.get(titles[i]));
